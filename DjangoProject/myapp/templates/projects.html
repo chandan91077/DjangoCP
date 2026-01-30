@@ -1,28 +1,18 @@
-<!DOCTYPE html>
+{% load static %}
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Projects | MyApp</title>
-</head>
-<body>
-
-<h1>Projects</h1>
-
-<nav>
-    <a href="/">Home</a> |
-    <a href="/education/">Education</a> |
-    <a href="/experience/">Experience</a> |
-    <a href="/skill/">Skills</a> |
-    <a href="/contact/">Contact</a>
-</nav>
-
-<hr>
-
-<ul>
-    <li>Library Management System - Django</li>
-    <li>Stock Forecasting System - Python</li>
-    <li>Medical Store App - Flutter</li>
-</ul>
-
-</body>
+  <head>
+    {% block head %}
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}" />
+    <title>projects</title>
+    {% endblock head %}
+  </head>
+  <body>
+    {% block content %}
+    <h1>Projects Page</h1>
+    <p>Welcome to the projects page. Here are some of our projects:</p>
+    {% endblock content%}
+  </body>
 </html>
