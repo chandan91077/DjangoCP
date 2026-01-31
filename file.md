@@ -118,7 +118,22 @@ for a in (Dog(), Cat()):
 
 ---
 
-## 📄 Author
-
-**Chandan Yadav**
-Python & Software Development Notes
+##Decorator ?
+A decorator is a function that takes another function as input and returns a new function with extended behavior.
+```def my_decorator(func):
+        def wrapper():
+            print("Before function call")
+            func()
+            print("After function call")
+        return wrapper
+        
+    
+        @my_decorator
+        def say_hello():
+            print("Hello")
+        say_hello()
+```
+## output
+Before function call
+Hello
+After function call
