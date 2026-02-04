@@ -16,6 +16,7 @@ import os
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # Static_DIR = os.path.join(BASE_DIR, 'static')
 STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
+TAILWIND_APP_NAME = "theme"
 
 
 # Quick-start development settings - unsuitable for production
@@ -33,6 +34,8 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'template',
+    'static',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',

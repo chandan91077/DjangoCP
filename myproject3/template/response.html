@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responses</title>
+</head>
+<body>
+    <h1>All Responses</h1>
+    
+    {% if responses %}
+        {% for response in responses %}
+            <div>
+                <h2>Response number {{ forloop.counter }}</h2>
+                <p><strong>Name:</strong> {{ response.name }}</p>
+                <p><strong>Email:</strong> {{ response.email }}</p>
+                <p><strong>Subject:</strong> {{ response.subject }}</p>
+                <p><strong>Message:</strong> {{ response.message }}</p>
+                <hr>
+            </div>
+        {% endfor %}
+    {% else %}
+        <p>No responses found.</p>
+    {% endif %}
+
+</body>
+</html>

@@ -1,1 +1,89 @@
-{% extends "projects.html" %}
+{% extends "base.html" %}
+
+{% block title %}Home - Chandan Yadav{% endblock %}
+
+{% block content %}
+<section class="hero">
+    <div class="container">
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1>Hi, I'm <span class="highlight">Chandan Yadav</span></h1>
+                <h2>Software Developer & Machine Learning Engineer</h2>
+                <p class="intro-text">
+                    Passionate about building scalable applications and leveraging machine learning 
+                    to solve real-world problems. Currently pursuing B.Tech in Computer Science 
+                    at Lovely Professional University.
+                </p>
+                <div class="hero-buttons">
+                    <a href="{% url 'projects' %}" class="btn btn-primary">View Projects</a>
+                    <a href="{% url 'contact' %}" class="btn btn-secondary">Get in Touch</a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <div class="profile-card">
+                    <div class="profile-icon">
+                        <i class="fas fa-user-circle"></i>
+                    </div>
+                    <h3>Chandan Yadav</h3>
+                    <p>Software Developer</p>
+                    <div class="profile-stats">
+                        <div class="stat">
+                            <span class="stat-number">70+</span>
+                            <span class="stat-label">LeetCode Problems</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number">3+</span>
+                            <span class="stat-label">Major Projects</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="quick-info">
+    <div class="container">
+        <div class="info-grid">
+            <div class="info-card">
+                <i class="fas fa-code"></i>
+                <h3>Full Stack Development</h3>
+                <p>Building responsive web applications with modern frameworks</p>
+            </div>
+            <div class="info-card">
+                <i class="fas fa-brain"></i>
+                <h3>Machine Learning</h3>
+                <p>Developing predictive models and AI-powered solutions</p>
+            </div>
+            <div class="info-card">
+                <i class="fas fa-database"></i>
+                <h3>Data Analysis</h3>
+                <p>Extracting insights using Python, Pandas, and visualization tools</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="highlights">
+    <div class="container">
+        <h2 class="section-title">Recent Achievements</h2>
+        <div class="achievements-grid">
+            <div class="achievement-card">
+                <i class="fas fa-certificate"></i>
+                <h3>ML Internship</h3>
+                <p>Completed internship at ZIDIO DEVELOPMENT, improving model accuracy by 50%</p>
+            </div>
+            <div class="achievement-card">
+                <i class="fas fa-trophy"></i>
+                <h3>70+ LeetCode Problems</h3>
+                <p>Strengthened DSA skills across diverse difficulty levels</p>
+            </div>
+            <div class="achievement-card">
+                <i class="fas fa-certificate"></i>
+                <h3>Google AI Certification</h3>
+                <p>Introduction to Generative AI by Google Skills</p>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

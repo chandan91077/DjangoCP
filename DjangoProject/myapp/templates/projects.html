@@ -1,18 +1,184 @@
-{% load static %}
-<!doctype html>
-<html lang="en">
-  <head>
-    {% block head %}
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="{% static 'css/styles.css' %}" />
-    <title>projects</title>
-    {% endblock head %}
-  </head>
-  <body>
-    {% block content %}
-    <h1>Projects Page</h1>
-    <p>Welcome to the projects page. Here are some of our projects:</p>
-    {% endblock content%}
-  </body>
-</html>
+{% extends "base.html" %} {% block title %}Projects - Chandan Yadav{% endblock
+%} {% block content %}
+<section class="page-header">
+  <div class="container">
+    <h1>Projects</h1>
+    <p>Showcasing my technical expertise through real-world applications</p>
+  </div>
+</section>
+
+<section class="projects-section">
+  <div class="container">
+    <div class="project-card featured">
+      <div class="project-header">
+        <h2><i class="fas fa-brain"></i> Mental Health AI Predictor</h2>
+        <span class="project-date">December 2025</span>
+      </div>
+      <div class="project-subtitle">Depression Screening System</div>
+      <div class="project-content">
+        <p class="project-description">
+          An end-to-end Machine Learning web application using Streamlit and
+          Scikit-learn to automate depression screening with confidence-based
+          severity prediction.
+        </p>
+        <div class="project-highlights">
+          <h3>Key Features:</h3>
+          <ul>
+            <li>
+              <i class="fas fa-check"></i> Designed modular architecture
+              separating UI, configuration, and ML pipelines for improved
+              maintainability and scalability
+            </li>
+            <li>
+              <i class="fas fa-check"></i> Implemented Random Forest
+              classification engine with automated data preprocessing and
+              feature encoding
+            </li>
+            <li>
+              <i class="fas fa-check"></i> Advanced data visualizations
+              including correlation matrices, feature importance charts, and
+              confusion matrices
+            </li>
+            <li>
+              <i class="fas fa-check"></i> Robust mental health analysis with
+              train-test evaluation
+            </li>
+          </ul>
+        </div>
+        <div class="project-tech">
+          <span class="tech-tag">Python</span>
+          <span class="tech-tag">Streamlit</span>
+          <span class="tech-tag">Scikit-learn</span>
+          <span class="tech-tag">Machine Learning</span>
+          <span class="tech-tag">Data Visualization</span>
+        </div>
+        <div class="project-links">
+          <a
+            href="https://github.com/chandan91077"
+            target="_blank"
+            class="btn btn-primary"
+          >
+            <i class="fab fa-github"></i> View on GitHub
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="project-card">
+      <div class="project-header">
+        <h2><i class="fas fa-wifi"></i> LPU WiFi Auto-Login Automation</h2>
+        <span class="project-date">November 2025</span>
+      </div>
+      <div class="project-content">
+        <p class="project-description">
+          Automated campus WiFi authentication system using Python and OpenCV,
+          optimizing login workflows to reduce manual access time by 40%.
+        </p>
+        <div class="project-highlights">
+          <h3>Key Features:</h3>
+          <ul>
+            <li>
+              <i class="fas fa-check"></i> Screen recognition pipeline
+              leveraging Computer Vision to detect dynamic login fields
+            </li>
+            <li>
+              <i class="fas fa-check"></i> Real-time GUI automation using
+              PyAutoGUI for seamless user interactions
+            </li>
+            <li>
+              <i class="fas fa-check"></i> Fault-tolerant execution logic with
+              exception handling for system stability
+            </li>
+            <li>
+              <i class="fas fa-check"></i> Secure credential input across
+              multiple network states
+            </li>
+          </ul>
+        </div>
+        <div class="project-tech">
+          <span class="tech-tag">Python</span>
+          <span class="tech-tag">OpenCV</span>
+          <span class="tech-tag">PyAutoGUI</span>
+          <span class="tech-tag">Computer Vision</span>
+          <span class="tech-tag">Automation</span>
+        </div>
+        <div class="project-links">
+          <a
+            href="https://github.com/chandan91077"
+            target="_blank"
+            class="btn btn-primary"
+          >
+            <i class="fab fa-github"></i> View on GitHub
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="project-card">
+      <div class="project-header">
+        <h2><i class="fas fa-medkit"></i> ANVIK BIOTECH</h2>
+        <span class="project-date">October 2025</span>
+      </div>
+      <div class="project-subtitle">Online Medical Store</div>
+      <div class="project-content">
+        <p class="project-description">
+          Full-stack e-commerce medical platform using Node.js and MongoDB,
+          enabling real-time inventory management and secure order processing.
+        </p>
+        <div class="project-highlights">
+          <h3>Key Features:</h3>
+          <ul>
+            <li>
+              <i class="fas fa-check"></i> Responsive admin dashboard with
+              Bootstrap for monitoring stock levels and customer activity
+            </li>
+            <li>
+              <i class="fas fa-check"></i> Scalable backend architecture
+              deployed on AWS EC2 with PM2 for high availability
+            </li>
+            <li>
+              <i class="fas fa-check"></i> RESTful APIs for authentication, cart
+              workflows, and order lifecycle automation
+            </li>
+            <li>
+              <i class="fas fa-check"></i> Production-grade stability with
+              real-time transactional logs
+            </li>
+          </ul>
+        </div>
+        <div class="project-tech">
+          <span class="tech-tag">Node.js</span>
+          <span class="tech-tag">MongoDB</span>
+          <span class="tech-tag">Bootstrap</span>
+          <span class="tech-tag">AWS EC2</span>
+          <span class="tech-tag">RESTful API</span>
+          <span class="tech-tag">PM2</span>
+        </div>
+        <div class="project-links">
+          <a
+            href="https://github.com/chandan91077"
+            target="_blank"
+            class="btn btn-primary"
+          >
+            <i class="fab fa-github"></i> View on GitHub
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="more-projects">
+  <div class="container">
+    <h2>Explore More</h2>
+    <p>Visit my GitHub profile to see all my projects and contributions</p>
+    <a
+      href="https://github.com/chandan91077"
+      target="_blank"
+      class="btn btn-secondary"
+    >
+      <i class="fab fa-github"></i> View All Projects on GitHub
+    </a>
+  </div>
+</section>
+{% endblock %}

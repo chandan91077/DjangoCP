@@ -1,0 +1,92 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{% block title %}Chandan Yadav - Portfolio{% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'styles.css' %}" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <header>
+      <nav class="navbar">
+        <div class="container">
+          <div class="nav-brand">
+            <h2>Chandan Yadav</h2>
+            <p class="tagline">Software Developer | ML Engineer</p>
+          </div>
+          <ul class="nav-menu">
+            <li>
+              <a
+                href="{% url 'home' %}"
+                class="{% if request.resolver_match.url_name == 'home' %}active{% endif %}"
+                >Home</a
+              >
+            </li>
+            <li>
+              <a
+                href="{% url 'skill' %}"
+                class="{% if request.resolver_match.url_name == 'skill' %}active{% endif %}"
+                >Skills</a
+              >
+            </li>
+            <li>
+              <a
+                href="{% url 'projects' %}"
+                class="{% if request.resolver_match.url_name == 'projects' %}active{% endif %}"
+                >Projects</a
+              >
+            </li>
+            <li>
+              <a
+                href="{% url 'experience' %}"
+                class="{% if request.resolver_match.url_name == 'experience' %}active{% endif %}"
+                >Experience</a
+              >
+            </li>
+            <li>
+              <a
+                href="{% url 'education' %}"
+                class="{% if request.resolver_match.url_name == 'education' %}active{% endif %}"
+                >Education</a
+              >
+            </li>
+            <li>
+              <a
+                href="{% url 'contact' %}"
+                class="{% if request.resolver_match.url_name == 'contact' %}active{% endif %}"
+                >Contact</a
+              >
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+
+    <main>{% block content %} {% endblock %}</main>
+
+    <footer>
+      <div class="container">
+        <div class="footer-content">
+          <div class="social-links">
+            <a href="https://github.com/chandan91077" target="_blank"
+              ><i class="fab fa-github"></i
+            ></a>
+            <a href="https://linkedin.com/in/chandanyadav426" target="_blank"
+              ><i class="fab fa-linkedin"></i
+            ></a>
+            <a href="mailto:chandany67071@gmail.com"
+              ><i class="fas fa-envelope"></i
+            ></a>
+            <a href="tel:+919682000334"><i class="fas fa-phone"></i></a>
+          </div>
+          <p>&copy; 2026 Chandan Yadav. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
