@@ -1,34 +1,36 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 
-# Create your views here.
+# views here.
 def contact_page(request):
+    # if request.method == 'POST':
+    #     name = request.POST.get('name')
+    #     email = request.POST.get('email')
+    #     subject = request.POST.get('subject')
+    #     message = request.POST.get('message')
+
+    if request.method == 'GET' and request.GET.get('name'):
+        name = request.GET.get('name')
+        email = request.GET.get('email')
+        subject = request.GET.get('subject')
+        message = request.GET.get('message')
+        # print(f"Contact form submitted: name={name}, email={email}, subject={subject}, message={message}") 
+        # to view the response in the terminal from the form submission 
+
+        person.objects.create(
+            name=name,
+            email=email,
+            subject=subject,
+            message=message,
+        )
+        return redirect('contact')
+
     return render(request, 'contact/contact.html')
 
-from django.shortcuts import render, redirect
-from django.contrib import messages
 from .models import person
-
-# def contact_form(request):
-#     """Handle contact form submission"""
-#     if request.method == 'POST':
-#         name = request.POST.get('name')
-#         email = request.POST.get('email')
-#         subject = request.POST.get('subject')
-#         message = request.POST.get('message')
-        
-#         # Save to database
-#         person.objects.create(
-#             name=name,
-#             email=email,
-#             subject=subject,
-#             message=message
-#         )
-#         messages.success(request, 'Message sent successfully!')
-#         return redirect('contact_form')
-    
-#     return render(request, 'contact/form.html')
 
 def view_responses(request):
     """Display all contact form responses"""
     responses = person.objects.all().order_by('-id')
     return render(request, 'response.html', {'responses': responses})
+
+
