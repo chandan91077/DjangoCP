@@ -1,7 +1,8 @@
 # 1. Create project folder
 mkdir PEPCLASS
-cd PEPCLASS
-
+cd PEPCLASS 
+# python3 -m venv .venv create the venv
+ For some Windows installations, you might need to use `python` instead of `python3`
 # 2. Create and activate virtual environment
 python -m venv .venv
 .venv\Scripts\activate
@@ -25,3 +26,4 @@ python manage.py createsuperuser
 
 # 8. Run development server
 python manage.py runserver
+
